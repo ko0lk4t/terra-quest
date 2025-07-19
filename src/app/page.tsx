@@ -1,103 +1,115 @@
-import Image from "next/image";
+"use client";
+import Link from 'next/link';
+import { MagnifyingGlassIcon, UserGroupIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="hero-gradient text-white py-20 lg:py-32">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-shadow leading-tight">
+            We connect tech executives with leading companies
+          </h1>
+          <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-gray-200">
+            TerraQuest specializes in executive search for technology leadership roles. We bridge the gap between visionary leaders and innovative companies seeking transformational growth.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+            <Link href="/contact?type=company" 
+                  className="bg-accent hover:bg-accent-light text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 shadow-lg">
+              For Companies
+            </Link>
+            <Link href="/contact?type=candidate" 
+                  className="bg-white hover:bg-gray-100 text-accent font-semibold py-4 px-8 rounded-lg transition-colors duration-200 shadow-lg">
+              For Candidates
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Key Services Section */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-accent mb-16">
+            Key Services
+          </h2>
+          <div className="grid gap-8 md:grid-cols-3">
+            {/* Executive Search */}
+            <div className="bg-white p-8 border border-gray-200 rounded-lg card-hover shadow-sm">
+              <div className="text-accent mb-4">
+                <MagnifyingGlassIcon className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Executive Search</h3>
+              <p className="text-gray-600 mb-4">
+                Our comprehensive executive search process identifies and attracts top-tier technology leaders who drive innovation and growth. We specialize in C-suite positions including CEO, CTO, CPO, and VP Engineering roles across startups to Fortune 500 companies.
+              </p>
+              <p className="text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <Link href="/services#executive-search" className="text-accent hover:text-accent-light font-medium mt-4 inline-block">
+                Learn more →
+              </Link>
+            </div>
+
+            {/* D&I Hiring */}
+            <div className="bg-white p-8 border border-gray-200 rounded-lg card-hover shadow-sm">
+              <div className="text-accent mb-4">
+                <UserGroupIcon className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Diversity & Inclusion Hiring</h3>
+              <p className="text-gray-600 mb-4">
+                Building diverse leadership teams that reflect the communities they serve. Our D&I-focused approach ensures comprehensive candidate pools while maintaining the highest standards of excellence and cultural fit.
+              </p>
+              <p className="text-gray-600">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <Link href="/services#diversity-inclusion" className="text-accent hover:text-accent-light font-medium mt-4 inline-block">
+                Learn more →
+              </Link>
+            </div>
+
+            {/* Global Placements */}
+            <div className="bg-white p-8 border border-gray-200 rounded-lg card-hover shadow-sm">
+              <div className="text-accent mb-4">
+                <GlobeAltIcon className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Global Placements</h3>
+              <p className="text-gray-600 mb-4">
+                Cross-border executive placements for companies expanding internationally or seeking global talent. We navigate cultural nuances, visa requirements, and international compensation structures to ensure successful placements.
+              </p>
+              <p className="text-gray-600">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              </p>
+              <Link href="/services#global-placements" className="text-accent hover:text-accent-light font-medium mt-4 inline-block">
+                Learn more →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call-to-Action Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to Find Your Next Executive Leader?
+          </h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Whether you're scaling your technology team or seeking your next career opportunity, 
+            TerraQuest is here to make the perfect connection.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/contact" 
+                  className="bg-accent hover:bg-accent-light text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              Start Your Search
+            </Link>
+            <Link href="/about" 
+                  className="border border-accent text-accent hover:bg-accent hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              Learn About Us
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

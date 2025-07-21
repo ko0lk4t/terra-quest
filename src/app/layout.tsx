@@ -11,33 +11,33 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "TerraQuest Executive Search | Technology Leadership Recruitment",
-    template: "%s | TerraQuest Executive Search"
+    default: "TerraQuest Airborne Geophysical Services | Precision Airborne Surveys",
+    template: "%s | TerraQuest Airborne Geophysical Services"
   },
-  description: "Leading executive search firm specializing in technology leadership roles. We connect visionary tech executives with innovative companies seeking transformational growth.",
-  keywords: ["executive search", "technology recruitment", "CTO search", "tech leadership", "executive hiring"],
-  authors: [{ name: "TerraQuest Executive Search" }],
-  creator: "TerraQuest Executive Search",
+  description: "TerraQuest Airborne Geophysical Services Ltd (TAGS) delivers precision airborne surveys for natural resource exploration, environmental monitoring, and geological mapping across 5 continents. Specialists in aeromagnetics, LiDAR, gravity & seepfinder technology.",
+  keywords: ["airborne geophysical surveys", "aeromagnetic surveys", "LiDAR mapping", "gravity surveys", "seepfinder", "geological mapping", "mineral exploration", "oil gas exploration", "environmental monitoring", "topographic mapping"],
+  authors: [{ name: "TerraQuest Airborne Geophysical Services Ltd" }],
+  creator: "TerraQuest Airborne Geophysical Services Ltd",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://terraquest.com",
-    siteName: "TerraQuest Executive Search",
-    title: "TerraQuest Executive Search | Technology Leadership Recruitment",
-    description: "Leading executive search firm specializing in technology leadership roles. We connect visionary tech executives with innovative companies.",
+    siteName: "TerraQuest Airborne Geophysical Services",
+    title: "TerraQuest Airborne Geophysical Services | Precision Airborne Surveys",
+    description: "TerraQuest Airborne Geophysical Services Ltd (TAGS) delivers precision airborne surveys for natural resource exploration, environmental monitoring, and geological mapping. 40+ years experience, 2400+ surveys across 24 countries.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "TerraQuest Executive Search",
+        alt: "TerraQuest Airborne Geophysical Services - Precision Airborne Surveys",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TerraQuest Executive Search | Technology Leadership Recruitment",
-    description: "Leading executive search firm specializing in technology leadership roles.",
+    title: "TerraQuest Airborne Geophysical Services | Precision Airborne Surveys",
+    description: "Precision airborne geophysical surveys for natural resource exploration and environmental monitoring. Aeromagnetics, LiDAR, gravity & seepfinder technology.",
     images: ["/twitter-image.jpg"],
   },
   robots: {

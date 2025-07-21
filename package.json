@@ -27,10 +27,13 @@
     "typescript": "^5"
   },
   "tailwindCSS": {
+    "darkMode": "class",
     "theme": {
       "extend": {
         "colors": {
-          "accent": "#0055A4"
+          "accent": "#0055A4",
+          "accent-light": "#0066CC",
+          "accent-dark": "#004494"
         }
       }
     },

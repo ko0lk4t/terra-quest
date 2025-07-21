@@ -66,11 +66,13 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased`}>
         <ThemeProvider>
-          <Navigation />
-          <main className="pt-20">
-            {children}
-          </main>
-          <Footer />
+          <div className="min-h-screen flex flex-col">
+            <Navigation />
+            <main className="pt-20 flex-grow">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
